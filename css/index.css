@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+section.firstPaper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 2000px;
+}
+section.firstPaper ul.synopsis {
+  position: absolute;
+  width: 6rem;
+  height: 4rem;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -3rem;
+  top: 1rem;
+}
+section.firstPaper ul.synopsis li {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6rem;
+  height: 4rem;
+  background: #ccc;
+  color: #fff;
+  opacity: 0;
+}
+section.firstPaper ul.synopsis li.current {
+  transition: all 2s;
+  opacity: 1;
+}
+section.firstPaper ul.synopsis li:nth-child(1) {
+  background-color: #ff8285;
+}
+section.firstPaper ul.synopsis li:nth-child(2) {
+  background-color: #feffb4;
+}
+section.firstPaper ul.synopsis li:nth-child(3) {
+  background-color: #aefcff;
+}
+section.firstPaper ul.synopsis li:nth-child(4) {
+  background-color: #aeffae;
+}
+section.firstPaper ul.synopsis li:nth-child(5) {
+  background-color: #bbd3ff;
+}
+section.firstPaper ul.synopsis li:nth-child(6) {
+  background-color: #ffabf5;
+}
+section.firstPaper div.faceBall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  top: 0;
+  left: 0;
+  transform: rotateX(0) rotateY(0);
+  transform-origin: 1rem 1rem -1em;
+  transform-style: preserve-3d;
+}
+section.firstPaper div.faceBall.ballMove {
+  animation: move 5s linear infinite 3s;
+}
+section.firstPaper div.faceBall div.surface {
+  margin-top: 0;
+  margin-left: 0;
+  position: absolute;
+  width: 100%;
+  height: 16.6%;
+  left: 0;
+  transition: all 0.5s;
+}
+section.firstPaper div.faceBall div.surface:nth-child(1) {
+  top: 0;
+  background-color: #ff8285;
+}
+section.firstPaper div.faceBall div.surface:nth-child(1).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #ff646c;
+}
+section.firstPaper div.faceBall div.surface:nth-child(2) {
+  top: 16.6%;
+  background-color: #feffb4;
+}
+section.firstPaper div.faceBall div.surface:nth-child(2).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #ffff68;
+}
+section.firstPaper div.faceBall div.surface:nth-child(3) {
+  top: 33.2%;
+  background-color: #aefcff;
+}
+section.firstPaper div.faceBall div.surface:nth-child(3).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #77f8ff;
+}
+section.firstPaper div.faceBall div.surface:nth-child(4) {
+  top: 49.8%;
+  background-color: #aeffae;
+}
+section.firstPaper div.faceBall div.surface:nth-child(4).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #65ff77;
+}
+section.firstPaper div.faceBall div.surface:nth-child(5) {
+  top: 66.4%;
+  background-color: #bbd3ff;
+}
+section.firstPaper div.faceBall div.surface:nth-child(5).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #58a7ff;
+}
+section.firstPaper div.faceBall div.surface:nth-child(6) {
+  top: 83%;
+  background-color: #ffabf5;
+}
+section.firstPaper div.faceBall div.surface:nth-child(6).current div.hover_active {
+  transition: all 1s;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  border-width: 0.1rem;
+  opacity: 0;
+  border-color: #ff57f0;
+}
+section.firstPaper div.faceBall div.surface .hover_active {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: -1.4rem;
+  margin-top: -1.4rem;
+  border-style: solid;
+  border-width: 0.4rem;
+  border-color: transparent;
+  opacity: 1;
+}
+@keyframes move {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
